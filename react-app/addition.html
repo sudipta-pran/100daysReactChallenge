@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>React Application</title>
+    <style>
+        .incorrect{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+
+
+    <script type="text/babel">
+    //JS codes
+        class App extends React.Component{
+            constructor(props){
+                super(props)
+
+                this.state = {
+                    num1:Math.floor(Math.random()*9),
+                    num2:Math.floor(Math.random()*9),
+                    score:0,
+                    response:"",
+                    incorrect: false
+                }
+
+                this.customStyle = {
+                    width:'300px',
+                    margin: '0 auto',
+                    textAlign: 'center'
+                }
+            }
+            render(){
+                return (
+                    <div style={this.customStyle}>
+                        <h1 className={this.state.incorrect? "incorrect":""}>{this.state.num1} + {this.state.num2}</h1>
+                        <input type="text" onChange={this.handleResponse} value={this.state.response} onKeyUp={this.calculateSum}/>
+                        <p>Score: {this.state.score}</p>
+                        <button onClick={this.reset} >Reset</button>
+                    </div>
+                )
+            }
+
+            handleResponse = (e) => {
+                this.setState({
+                    response: e.target.value
+                })
+            }
+
+            calculateSum = (e) => {
+                if(e.keyCode == 13){
+                    let sum = this.state.num1 + this.state.num2
+                    if(parseInt(this.state.response) == sum){
+                    console.log("called")
+                        this.setState(prevState => ({
+                            num1:Math.floor(Math.random()*9),
+                            num2:Math.floor(Math.random()*9),
+                            score: prevState.score + 1,
+                            response:"",
+                            incorrect:false
+                        }))
+                    }else{
+                        this.setState(prevState => ({                            
+                            response:"",
+                            incorrect:true
+                        }))
+                    }
+                }
+            }
+
+            reset = () => 
+                this.setState({
+                    num1:Math.floor(Math.random()*9),
+                    num2:Math.floor(Math.random()*9),
+                    score:0,
+                    response:""
+                })
+            
+        }
+
+        
+
+        ReactDOM.render(<App />, document.getElementById("app"))
+    </script>
+</body>
+</html>
