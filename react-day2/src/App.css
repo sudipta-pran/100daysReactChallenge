@@ -1,0 +1,16 @@
+.App {
+  margin-top:200px;
+  text-align: center;
+}
+.App input{
+  width:300px;
+  height:30px;
+}
+.App button{
+  padding:10px 20px;
+  background-color: blueviolet;
+  border:none;
+  font-weight: bold;
+  color:#fff;
+  margin-top:10px;
+}
