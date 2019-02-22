@@ -10,3 +10,8 @@ I created a github repository. The folder name is React-app. It is just testing 
 # day 002
 21/2/19
 
+I created a react app using Node and npx, and create-react-app CLI. It is a simple hello application, where you enter your name and press submit, then you are greeted with a message.
+
+# day 003
+
+Using a fake RESTFUL API (https://jsonplaceholder.typicode.com/posts) I've created a react app to display some posts.
