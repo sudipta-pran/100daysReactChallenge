@@ -15,3 +15,7 @@ I created a react app using Node and npx, and create-react-app CLI. It is a simp
 # day 003
 
 Using a fake RESTFUL API (https://jsonplaceholder.typicode.com/posts) I've created a react app to display some posts.
+
+#day 004
+
+Using Reddit Api to display latest React JS subreddits. It doesn't require authentication. Next I'll try twitter api which requires authentication and is a bit more complex.
