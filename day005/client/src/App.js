@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Form from './components/Form'
 
 class App extends Component {
   constructor(props){
@@ -15,7 +16,16 @@ class App extends Component {
     fetch('http://localhost:5000/')
       .then(res => res.json())
       .then(data => this.setState({
-        posts: data
+        posts: data.reverse()
+      }))
+  }
+
+  handleRefresh = () => {
+    //Refresh component
+    fetch('http://localhost:5000/')
+      .then(res => res.json())
+      .then(data => this.setState({
+        posts: data.reverse()
       }))
   }
 
@@ -31,6 +41,7 @@ class App extends Component {
     }
     return (
       <div className="App">
+        <Form propFunction={this.handleRefresh}/>
         <ul>
           {items}
         </ul>

@@ -10,8 +10,26 @@ app.use((req,res,next) => {
     next()
 })
 
+//MiddleWare Body-Parser
+app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
+
 //Set API
-app.get('/',(req,res) => {
+//Get all post
+app.get('/', (req,res) => {
+    res.send(Posts)
+})
+
+//Post request
+app.post('/', (req,res) => {
+    let id = Posts.length + 1
+    let title = req.body.title
+    let body = req.body.body
+    Posts.push({
+        id,
+        title,
+        body
+    })
     res.send(Posts)
 })
 

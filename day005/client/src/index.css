@@ -12,3 +12,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.form{
+  margin:20px 0;
+  padding: 20px;
+  border:1px solid #000;
+  text-align: center;
+}
+.form input{
+  display: block;
+  width:100%;
+  height:30px;
+}
+.form button{
+  display: block;
+  width:100%;
+  height:30px;
+}
