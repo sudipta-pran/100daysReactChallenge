@@ -28,6 +28,11 @@ Using Reddit Api to display latest React JS subreddits. It doesn't require authe
 Created my own API in express (node). It simple returns an array of posts stored in a file. The API is exposed at port 5000 while the react app runs at port 3000. In the lifecycle method ‘componentDidMount’, I’ve done a fetch API call, and when the promise resolves, I save the returned array in the component’s state. In the render method, I map over the values and display them as list items.
 
 # day 006: 
-26/2/19
+25/2/19
 
 Working on top of yesterday's app. So no new folder created. This code is pushed to day005 folder. Created POST request handling in the express API, so that we can create a post in the react app on a form, and after posting, the App component refreshes to show the new Post. No validation or sanitization implemented. This code is awefull. LOL.
+
+# day 007: 
+26/2/19
+
+Working on top of 5th day's app. So no new folder created. This code is pushed to day005 folder. Added MongoDB using MLAB. Get and Post methods are implemeneted.
