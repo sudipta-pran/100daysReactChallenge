@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>React Application</title>
+    <style>
+        .incorrect{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+
+
+    <script type="text/babel">
+    //JS codes
+        function App(){
+            //Style
+            const customStyle = {
+                width:'300px',
+                margin: '0 auto',
+                textAlign: 'center'
+            }
+            // Declare a new state variable, which we'll call "count"
+            const [num1, setNum1] = React.useState(Math.floor(Math.random()*9))
+            const [num2, setNum2] = React.useState(Math.floor(Math.random()*9))
+            const [score, setScore] = React.useState(0)
+            const [response, setResponse] = React.useState('')
+            const [incorrect, setIncorrect] = React.useState(false)
+
+            return (
+                <div style={customStyle}>
+                    <h1 className={incorrect? "incorrect":""}>{num1} + {num2}</h1>
+                    <input type="text" onChange={(e) => setResponse(e.target.value)} value={response} onKeyUp={calculateSum}/>
+                    <p>Score: {score}</p>
+                    <button onClick={() => reset()} >Reset</button>
+                </div>
+            )
+            
+            function calculateSum(e){
+                if(e.keyCode == 13){
+                    let sum = num1 + num2
+                    if(parseInt(response) == sum){
+                        console.log("called")
+                        setNum1(Math.floor(Math.random()*9))
+                        setNum2(Math.floor(Math.random()*9))
+                        setScore(score+1)
+                        setResponse('')
+                        setIncorrect(false)
+                        
+                    }else{
+                        setResponse('')
+                        setIncorrect(true)
+                    }
+                }
+            }
+
+            
+
+            // calculateSum = (e) => {
+            //     
+            // }
+
+            function reset() {
+                setNum1(Math.floor(Math.random()*9))
+                setNum2(Math.floor(Math.random()*9))
+                setScore(0)
+                setResponse('')
+                setIncorrect(false)
+            }
+                
+            
+        }
+
+        
+
+        ReactDOM.render(<App />, document.getElementById("app"))
+    </script>
+</body>
+</html>

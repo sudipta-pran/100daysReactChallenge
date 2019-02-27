@@ -36,7 +36,7 @@ app.post('/', (req,res) => {
 
 
 
-MongoClient.connect('mongodb://abc123:abc123@ds135252.mlab.com:35252/reactchallenge',
+MongoClient.connect('mongodb://<username>:<password>@ds135252.mlab.com:35252/reactchallenge',
     { useNewUrlParser: true }, 
     (err, client) => {
         if (err) return console.log(err)

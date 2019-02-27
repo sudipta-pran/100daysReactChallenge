@@ -36,3 +36,8 @@ Working on top of yesterday's app. So no new folder created. This code is pushed
 26/2/19
 
 Working on top of 5th day's app. So no new folder created. This code is pushed to day005 folder. Added MongoDB using MLAB. Get and Post methods are implemeneted.
+
+# day 008: 
+27/2/19
+
+Tried React Hooks for the first Time. I’m not using node or npm here. I’ve just used react, react-dom and babel libraries as CDN links. Worked on the addition game of the first day's project. Everything works perfectly. I love react hooks.
