@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.min.js"></script>
+    <title>Redux Vanilla Application</title>
+    <style>
+        #app{
+            width:300px;
+            margin:100px auto;
+            border:2px solid #999;
+            padding:50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1 id="sum">1</h1>
+        <button id="increment">Increment</button><br/><br/>
+        <button id="decrement">Decrement</button>
+    </div>
+
+
+    <script >
+        //JS codes type="text/babel"
+        const text = document.getElementById("sum")
+        const incrementBtn = document.getElementById("increment")
+        const decrementBtn = document.getElementById("decrement")
+
+
+        const reducer = (state, action) => {
+            switch(action.type){
+                case "ADD":
+                    state += action.payload
+                    break
+                case "SUB":
+                    state -= action.payload
+                    break
+                default:
+                    break
+            }
+            return state
+        }
+        const store = window.Redux.createStore(reducer, 1)
+        
+
+        store.subscribe(() => {
+            text.innerHTML = store.getState()
+        })
+
+
+        incrementBtn.addEventListener('click', () => {store.dispatch({
+                type: "ADD",
+                payload: 1
+            })
+        })
+            
+        decrementBtn.addEventListener('click', () => {store.dispatch({
+                type: "SUB",
+                payload: 1
+            })
+        })
+    </script>
+</body>
+</html>

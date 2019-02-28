@@ -41,3 +41,8 @@ Working on top of 5th day's app. So no new folder created. This code is pushed t
 27/2/19
 
 Tried React Hooks for the first Time. I’m not using node or npm here. I’ve just used react, react-dom and babel libraries as CDN links. Worked on the addition game of the first day's project. Everything works perfectly. I love react hooks.
+
+# day 009: 
+28/2/19
+
+Tried Redux for the first time. It is a predictable state container for JavaScript apps. Note "Javascript app". It doesn't have to be a React app. It works kinda in a publish-subscribe pattern. Since it is a javascript library, I first tried including it in script tags, in a simple html file and made a vanilla javascript application which just increments or decrements a number on button clicks. The code can be found in the folder 'day009Redux'.
