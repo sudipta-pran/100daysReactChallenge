@@ -1,0 +1,11 @@
+body{
+  background: #ddd;
+  color:#222;
+}
+.App {
+  margin:100px auto;
+  width:960px;
+}
+.App ul{
+  list-style: none;
+}

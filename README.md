@@ -46,3 +46,8 @@ Tried React Hooks for the first Time. I’m not using node or npm here. I’ve j
 28/2/19
 
 Tried Redux for the first time. It is a predictable state container for JavaScript apps. Note "Javascript app". It doesn't have to be a React app. It works kinda in a publish-subscribe pattern. Since it is a javascript library, I first tried including it in script tags, in a simple html file and made a vanilla javascript application which just increments or decrements a number on button clicks. The code can be found in the folder 'day009Redux'.
+
+# day 010: 
+1/3/19
+
+Tried Redux with React for the first time. Made a copy of my day 5's app and implemented app level state management with redux. To be honest, I'm still a bit confused. Need to work on this a few more days. The code can be found in the folder 'day10ReduxInReact'.
