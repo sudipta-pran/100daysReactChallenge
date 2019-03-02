@@ -51,3 +51,8 @@ Tried Redux for the first time. It is a predictable state container for JavaScri
 1/3/19
 
 Tried Redux with React for the first time. Made a copy of my day 5's app and implemented app level state management with redux. To be honest, I'm still a bit confused. Need to work on this a few more days. The code can be found in the folder 'day10ReduxInReact'.
+
+# day 011: 
+2/3/19
+
+Practiced redux in react with jsonplaceholder API. Need more practice, its still quite confusing.
