@@ -56,3 +56,8 @@ Tried Redux with React for the first time. Made a copy of my day 5's app and imp
 2/3/19
 
 Practiced redux in react with jsonplaceholder API. Need more practice, its still quite confusing.
+
+# day 012: 
+3/3/19
+
+Practiced more redux in react with FAKE API!!!! I used setTimeout function to simulate network delays. It also provides Async feature, so thunk middleware can be used. Kinda getting the hang of it. Need more practice though.
