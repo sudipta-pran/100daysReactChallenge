@@ -61,3 +61,8 @@ Practiced redux in react with jsonplaceholder API. Need more practice, its still
 3/3/19
 
 Practiced more redux in react with FAKE API!!!! I used setTimeout function to simulate network delays. It also provides Async feature, so thunk middleware can be used. Kinda getting the hang of it. Need more practice though.
+
+# day 013: 
+4/3/19
+
+Attempted Next.js app. Its a server side React framework. Made an app that shows bitcoin prices using a free API. Followed a tutorial by Brad Traversy.
