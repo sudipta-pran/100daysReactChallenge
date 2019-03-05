@@ -66,3 +66,8 @@ Practiced more redux in react with FAKE API!!!! I used setTimeout function to si
 4/3/19
 
 Attempted Next.js app. Its a server side React framework. Made an app that shows bitcoin prices using a free API. Followed a tutorial by Brad Traversy.
+
+# day 014: 
+5/3/19
+
+Practiced more redux in react w with jsonplaceholder API. I re-did the day12 app. 
