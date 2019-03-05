@@ -1,32 +1,32 @@
 import React, { Component } from 'react'
-import { connect } from "react-redux"
-import { addPosts } from "../actions/postActions"
+import { connect } from 'react-redux'
+import { addPost } from '../actions/postActions'
 
 class Form extends Component {
-    state = {
-        title:'',
-        body:''
-    }
+  state = {
+      title: "",
+      body: ""
+  }
 
-    handleChange = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value
-        })
-    }
+  handleChange = (e) => {
+      this.setState({
+        [e.target.name]: e.target.value
+      })
+  }
 
-    handleClick = () => {
-        this.props.addPosts(this.state)
-    }
+  handleSubmit = () => {
+      this.props.addPost(this.state)
+  }
 
-    render() {
-        return (
-        <div>
-            <input name="title" onChange={this.handleChange} value={this.state.title}/><br/>
-            <input name="body" onChange={this.handleChange} value={this.state.body}/><br/>
-            <button onClick={this.handleClick}>Submit</button>
-        </div>
-        )
-    }
+  render() {
+    return (
+      <div>
+        <input name="title" onChange={this.handleChange} value={this.state.title} />
+        <input name="body" onChange={this.handleChange} value={this.state.body} />
+        <button onClick={this.handleSubmit}>Submit</button>
+      </div>
+    )
+  }
 }
 
-export default connect(null, { addPosts })(Form)
+export default connect(null, {addPost})(Form)

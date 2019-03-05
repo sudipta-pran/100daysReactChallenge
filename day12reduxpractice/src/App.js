@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Provider } from "react-redux"
-import { store } from "./store"
-import Form from "./components/Form"
-import Posts from "./components/Posts"
+import { Provider } from 'react-redux'
+import { store } from './store'
+import Posts from './components/Posts'
+import Form from './components/Form'
 import './App.css';
 
 class App extends Component {
@@ -13,7 +13,7 @@ class App extends Component {
           <Form /><br />
           <Posts />
         </div>
-      </Provider>      
+      </Provider>   
     );
   }
 }
