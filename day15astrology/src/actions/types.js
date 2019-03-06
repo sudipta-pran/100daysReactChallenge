@@ -1,0 +1,1 @@
+export const FETCH_HOROSCOPE = 'FETCH_HOROSCOPE'

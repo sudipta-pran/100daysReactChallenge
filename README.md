@@ -71,3 +71,8 @@ Attempted Next.js app. Its a server side React framework. Made an app that shows
 5/3/19
 
 Practiced more redux in react w with jsonplaceholder API. I re-did the day12 app. 
+
+# day 015: 
+6/3/19
+
+Tried making a horoscope app using an API https://astrologyapi.com/ but cannot make requests from localhost as its protected by CORS policy. Will try to deploy and check tomorrow.
