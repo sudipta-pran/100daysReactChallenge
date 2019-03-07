@@ -76,3 +76,10 @@ Practiced more redux in react w with jsonplaceholder API. I re-did the day12 app
 6/3/19
 
 Tried making a horoscope app using an API https://astrologyapi.com/ but cannot make requests from localhost as its protected by CORS policy. Will try to deploy and check tomorrow.
+
+# day 016: 
+7/3/19
+
+Using API https://astrologyapi.com/ made a horoscope app in react with redux. Its a continuation of yesterday's project. Hosted on my shared Godaddy hosting. URL: http://jinsoft.in/games/astrology/
+
+I have written a blog on how to host a react app, made with create-react-app in Shared Cpanel hosting. Link: http://jinsoft.in/host-react-app-on-shared-cpanel-hosting/

@@ -3,11 +3,11 @@ const userId = ''
 const apiKey = ''
 
 export const fetchHoroscope = (data) => (dispatch) => {
-    fetch("https://json.astrologyapi.com/v1/birth_details",{
+    fetch("https://json.astrologyapi.com/v1/astro_details",{
         method: "POST",
         headers: {
         authorization: "Basic " + btoa(userId+":"+apiKey),
-        contentType:'application/json'
+        "Content-Type":'application/json'
     },
     body:JSON.stringify(data)})
     .then( resp => resp.json())

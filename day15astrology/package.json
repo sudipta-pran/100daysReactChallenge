@@ -1,5 +1,6 @@
 {
   "name": "day15astrology",
+  "homepage": "http://jinsoft.in/games/astrology",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

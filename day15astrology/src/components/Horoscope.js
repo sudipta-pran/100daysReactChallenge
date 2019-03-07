@@ -1,28 +1,30 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import {fetchHoroscope} from '../actions/horoscopeActions'
+import './Horoscope.css'
 
 class Horoscope extends Component {
-    componentWillMount(){
-        const data = {
-            "year": 1992,
-            "month": 7,
-            "day": 22,
-            "hour": 9,
-            "min": 21,
-            "lat": 25.31668,
-            "lon": 83.01042,
-            "tzone": 5.5
-            }
-        this.props.fetchHoroscope(data)
-    }
+    
   render() {
     let item
-      if(this.props.horoscope){
-         item = this.props.horoscope.sunrise
+      if(this.props.horoscope.sign){
+         item = <div>
+           <h1>Your Horoscope data</h1>
+           <ul>
+             <li>Your Sign: <strong>{this.props.horoscope.sign}</strong></li>
+             <li>Your Name Alphabet: <strong>{this.props.horoscope.name_alphabet}</strong></li>
+             <li>Your Sign Lord: <strong>{this.props.horoscope.SignLord}</strong></li>
+             <li>Your Naksahtra: <strong>{this.props.horoscope.Naksahtra}</strong></li>
+             <li>Your NaksahtraLord: <strong>{this.props.horoscope.NaksahtraLord}</strong></li>
+             <li>The Yog: <strong>{this.props.horoscope.Yog}</strong></li>
+             <li>The Tithi: <strong>{this.props.horoscope.Tithi}</strong></li>
+           </ul>
+        </div>
+      }else{
+        item = <h1>Fill the details above</h1>
       }
     return (
-      <div>
+      <div className="Horoscope">
         {item}
       </div>
     )

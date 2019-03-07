@@ -1,0 +1,13 @@
+.Horoscope{
+    width:960px;
+    margin:0 auto;
+}
+
+.Horoscope ul{
+    list-style: none;
+}
+
+.Horoscope ul li{
+    border:1px solid #ddd;
+    padding:20px;
+}
