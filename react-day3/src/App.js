@@ -1,40 +1,36 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { Provider } from 'react-redux'
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
 import './App.css';
+import Posts from './Posts'
+
+const initialState = {
+  posts: []
+}
+
+const rootReducer = (state = initialState, action) => {
+  switch(action.type){
+      case "FETCH_POSTS":
+          return {
+              ...state,
+              posts: action.payload
+          }
+      default:
+          return state
+  }
+}
+
+const store = createStore(rootReducer, initialState, applyMiddleware(thunk))
 
 class App extends Component {
-  constructor(props){
-    super(props)
-
-    this.state = {
-      posts:[]
-    }
-  }
-
-  componentDidMount(){
-    fetch('https://jsonplaceholder.typicode.com/posts')
-      .then(response => response.json())
-      .then(data => this.setState({
-        posts:data
-      }))
-  }
-
   render() {
-    let items
-    if(this.state.posts !== []){
-      items = this.state.posts.map(post => <li>
-          <h1>{post.title}</h1>
-          <br/>
-          <p>{post.body}</p>
-        </li>)
-    }else{
-      items = <p>No posts</p>
-    }
     return (
-      <div className="App">
-        <ul className="postList">
-          {items}
-        </ul>
-      </div>
+      <Provider store={store}>
+        <div className="App">
+          <Posts/>
+        </div>
+      </Provider>
     );
   }
 }
