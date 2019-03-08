@@ -83,3 +83,8 @@ Tried making a horoscope app using an API https://astrologyapi.com/ but cannot m
 Using API https://astrologyapi.com/ made a horoscope app in react with redux. Its a continuation of yesterday's project. Hosted on my shared Godaddy hosting. URL: http://jinsoft.in/games/astrology/
 
 I have written a blog on how to host a react app, made with create-react-app in Shared Cpanel hosting. Link: http://jinsoft.in/host-react-app-on-shared-cpanel-hosting/
+
+# day 017: 
+8/3/19
+
+Implemented redux in the react app I made in day 3. This was a quick redux practice.
