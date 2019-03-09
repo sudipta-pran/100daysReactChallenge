@@ -88,3 +88,8 @@ I have written a blog on how to host a react app, made with create-react-app in 
 8/3/19
 
 Implemented redux in the react app I made in day 3. This was a quick redux practice.
+
+# day 018: 
+9/3/19
+
+Learned about react router.
