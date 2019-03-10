@@ -93,3 +93,8 @@ Implemented redux in the react app I made in day 3. This was a quick redux pract
 9/3/19
 
 Learned about react router.
+
+# day 019: 
+10/3/19
+
+Learned about Client Side Rendering, Server Side Rendering and Static Site Generators and their use cases. Practiced react router.
