@@ -98,3 +98,8 @@ Learned about react router.
 10/3/19
 
 Learned about Client Side Rendering, Server Side Rendering and Static Site Generators and their use cases. Practiced react router.
+
+# day 020: 
+11/3/19
+
+Learned about Gatsby which is a Static Site Generator framework. Created a small broiler-plate.
