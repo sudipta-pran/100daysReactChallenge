@@ -103,3 +103,8 @@ Learned about Client Side Rendering, Server Side Rendering and Static Site Gener
 11/3/19
 
 Learned about Gatsby which is a Static Site Generator framework. Created a small broiler-plate.
+
+# day 021: 
+12/3/19
+
+Learned more about Gatsby and GraphQL.
