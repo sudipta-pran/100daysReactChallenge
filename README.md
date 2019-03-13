@@ -108,3 +108,8 @@ Learned about Gatsby which is a Static Site Generator framework. Created a small
 12/3/19
 
 Learned more about Gatsby and GraphQL.
+
+# day 022: 
+13/3/19
+
+Created a multi-part Form Submission App. Front end only
