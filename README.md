@@ -113,3 +113,8 @@ Learned more about Gatsby and GraphQL.
 13/3/19
 
 Created a multi-part Form Submission App. Front end only
+
+# day 023: 
+14/3/19
+
+Learned more about Server Side Rendering, webpack bundling and running react on node server.
