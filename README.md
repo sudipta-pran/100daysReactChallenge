@@ -118,3 +118,10 @@ Created a multi-part Form Submission App. Front end only
 14/3/19
 
 Learned more about Server Side Rendering, webpack bundling and running react on node server.
+
+# day 024: 
+15/3/19
+
+Spent a couple of hours in FFF Twitch Stream where MPJ started a new project, also in React. Had a discussion on my 100days challenge with MPJ and people in the chat. Got the first star in this repo!!!
+Spent another hour watching this awesome youtube channel called ReactCasts https://www.youtube.com/channel/UCZkjWyyLvzWeoVWEpRemrDQ/videos
+Hope I'll do some coding tomorrow!!!
