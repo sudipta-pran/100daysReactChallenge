@@ -129,4 +129,4 @@ Hope I'll do some coding tomorrow!!!
 # day 025:
 16/3/19
 
-React Children API:
+React Children API: Made a slideShow of lions using react children API.
