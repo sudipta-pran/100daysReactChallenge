@@ -130,3 +130,8 @@ Hope I'll do some coding tomorrow!!!
 16/3/19
 
 React Children API: Made a slideShow of lions using react children API.
+
+# day 026:
+17/3/19
+
+React Context API. Watched a few youtube videos on the context API.
