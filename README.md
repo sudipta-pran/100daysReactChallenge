@@ -135,3 +135,8 @@ React Children API: Made a slideShow of lions using react children API.
 17/3/19
 
 React Context API. Watched a few youtube videos on the context API.
+
+# day 027:
+18/3/19
+
+Had an introductory session on Vue to get a comparision with React. Personally I like react better.
