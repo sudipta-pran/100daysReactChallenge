@@ -140,3 +140,8 @@ React Context API. Watched a few youtube videos on the context API.
 18/3/19
 
 Had an introductory session on Vue to get a comparision with React. Personally I like react better.
+
+# day 028:
+19/3/19
+
+Started a TODO list app. Will complete tomorrow.
