@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  width:600px;
+  margin:0 auto;
 }
 .postList{
   list-style: none;

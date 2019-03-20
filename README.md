@@ -145,3 +145,8 @@ Had an introductory session on Vue to get a comparision with React. Personally I
 19/3/19
 
 Started a TODO list app. Will complete tomorrow.
+
+# day 029:
+20/3/19
+
+Worked on TODO list app.
