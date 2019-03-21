@@ -7,11 +7,11 @@ import Todos from './components/Todos'
 class App extends Component {
   render() {
     return (
-      <Provider store={store}>
-        <div className="App">
-          <h1>Todo list</h1>
-          <Todos/>
-        </div>
+      <Provider store={store}>        
+          <h1 className="heading">Todo list</h1>
+          <div className="App">
+            <Todos/>
+          </div>
       </Provider>
     );
   }

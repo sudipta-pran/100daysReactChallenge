@@ -150,3 +150,8 @@ Started a TODO list app. Will complete tomorrow.
 20/3/19
 
 Worked on TODO list app.
+
+# day 030:
+21/3/19
+
+Finished the Todo app using redux. Initial list is fetched from jsonplaceholder API.
