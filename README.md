@@ -155,3 +155,8 @@ Worked on TODO list app.
 21/3/19
 
 Finished the Todo app using redux. Initial list is fetched from jsonplaceholder API.
+
+# day 031:
+22/3/19
+
+Planning on a location tracker app using google geolocation tracking API. Went through some documentation and youtube videos.
