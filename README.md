@@ -165,3 +165,8 @@ Planning on a location tracker app using google geolocation tracking API. Went t
 23/3/19
 
 Going through documentation of google maps API
+
+# day 033:
+24/3/19
+
+Couldn't find a way to get live co-ordinates of my phone directly from any API(google account, manufacturer, IMEI number). Maybe need to create a mobile app to send the live co-ordinates to a server. Is it time to start learning react-native????
