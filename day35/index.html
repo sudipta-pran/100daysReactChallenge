@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>React Stop Watch</title>
+    <style>
+        body{
+            padding-top:50px;
+        }
+        .btn{
+            margin:20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+
+
+    <script type="text/babel">
+    //JS codes
+        //GLOBAL VARIABLES
+        let canvas, context
+        class App extends React.Component{
+            constructor(){
+                super()
+                this.customStyle = {
+                    width:'300px',
+                    margin: '0 auto',
+                    textAlign: 'center'
+                }
+            }
+            render(){
+                return (
+                    <div style={this.customStyle}>
+                        <h2>Stop Watch by {this.props.name}</h2>
+                        <Clock />
+                    </div>
+                )
+            }
+        }
+
+        
+
+        class Clock extends React.Component{
+            constructor(){
+                super()
+
+                this.state = { count : 0 }
+
+                this.startCount = () => {
+                    this.counter = setInterval(
+                        () => this.setState({ count: this.state.count + 1 }), 
+                        1000)
+                }
+                
+                this.stopCount = () => clearInterval(this.counter)
+
+                this.resetCount = () => this.setState({ count: 0 })
+            }
+
+            componentDidMount() {
+                canvas = this.refs.canvas
+                context = canvas.getContext("2d")
+
+                this.draw(0)                
+            }
+            
+            componentDidUpdate(){
+                this.draw(this.state.count)
+            }
+
+            render(){
+                let time = this.state.count
+                let hours = Math.floor(time/3600)                
+                let minutes = Math.floor(time/60)
+                minutes = minutes >= 60 ? minutes % 60 : minutes
+                let seconds = time % 60
+                return (
+                    <div>
+                        <h2>{hours} hrs: {minutes} min: {seconds} sec</h2>                  
+                        <canvas ref="canvas" width={310} height={310}></canvas><br/>
+                        <button className="btn btn-success" onClick={this.startCount}>START</button>  
+                        <button className="btn btn-danger" onClick={this.stopCount}>STOP</button><br/>
+                        <button className="btn btn-primary" onClick={this.resetCount}>RESET</button>
+                    </div>
+                )
+            }
+
+            draw(count){                
+                context.fillStyle = "#ffffff"
+                context.fillRect(0,0,canvas.width, canvas.height)
+
+                //DRAW CLOCK BOUNDARY
+                context.beginPath()
+                context.arc(canvas.width/2, canvas.height/2, 150, 0, 2 * Math.PI)
+                context.lineWidth = 5
+                context.stroke()
+                context.closePath()
+
+                // DRAW CLOCK CENTER
+                context.beginPath()
+                context.arc(canvas.width/2, canvas.height/2, 10, 0, 2 * Math.PI)
+                context.fillStyle = "#000000"
+                context.fill()
+                context.closePath()
+
+                let angleSeconds = - (Math.PI/2) + ((Math.PI*2)/60)*count
+                let angleMinutes = - (Math.PI/2) + ((Math.PI*2)/60)*(count/60)
+                let angleHours = - (Math.PI/2) + ((Math.PI*2)/60)*(count/3600)
+
+                //SECOND HAND
+                let xSeconds = 140 * Math.cos(angleSeconds) + canvas.width/2
+                let ySeconds = 140 * Math.sin(angleSeconds) + canvas.height/2
+                context.beginPath()
+                context.moveTo(canvas.width/2, canvas.height/2)
+                context.lineTo(xSeconds,ySeconds)
+                context.lineWidth = 2
+                context.stroke()
+                context.closePath()
+
+                //MINUTE HAND
+                let xMinutes = 140 * Math.cos(angleMinutes) + canvas.width/2
+                let yMinutes = 140 * Math.sin(angleMinutes) + canvas.height/2
+                context.beginPath()
+                context.moveTo(canvas.width/2, canvas.height/2)
+                context.lineTo(xMinutes,yMinutes)
+                context.lineWidth = 5
+                context.stroke()
+                context.closePath()
+
+                //HOUR HAND
+                let xHours = 100 * Math.cos(angleHours) + canvas.width/2
+                let yHours = 100 * Math.sin(angleHours) + canvas.height/2
+                context.beginPath()
+                context.moveTo(canvas.width/2, canvas.height/2)
+                context.lineTo(xHours,yHours)
+                context.lineWidth = 10
+                context.stroke()
+                context.closePath()
+            }
+        }
+
+        ReactDOM.render(<App name="Mr. X"/>, document.getElementById("app"))
+    </script>
+</body>
+</html>
