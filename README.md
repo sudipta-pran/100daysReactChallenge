@@ -182,3 +182,8 @@ Finally starting to learn react-native. Used an online editor tool (https://snac
 Been away to another city for a few days. In that trip had the opportunity to teach some university student about web development and react in particular. This was a 2 day workshop so it was just an introductory program. At the end the students were given to make a timer in react using state.
 
 To add on it, I created a clock in a canvas and made it tick according to this timer, thus making the project a stopwatch. It is live here: http://jinsoft.in/games/stopwatch/index.html
+
+# day 036:
+8/4/19
+
+Again had to be away for a couple of days. Today I listen to a podcast by the creator of hooks Dan Abramov with MPJ.
