@@ -187,3 +187,8 @@ To add on it, I created a clock in a canvas and made it tick according to this t
 8/4/19
 
 Again had to be away for a couple of days. Today I listen to a podcast by the creator of hooks Dan Abramov with MPJ.
+
+# day 037:
+10/4/19
+
+Watched an hour long tutorial on fileUploads using react hooks and bootstrap.
