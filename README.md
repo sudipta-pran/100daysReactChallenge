@@ -192,3 +192,9 @@ Again had to be away for a couple of days. Today I listen to a podcast by the cr
 10/4/19
 
 Watched an hour long tutorial on fileUploads using react hooks and bootstrap.
+
+# day 038:
+10/1/2020
+
+Been away from this challenge, although I've worked in real react projects. Today wrote a blog about react-draft-wysiswg editor. Github repo: https://github.com/sudipta-pran/react-draft-wysiwyg-blogger
+Blog: http://jinsoft.in/putting-a-react-draft-wysiwyg-editor-in-your-mern-application/
